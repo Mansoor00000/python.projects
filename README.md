@@ -126,3 +126,48 @@ if order_1 in [1, 2, 3, 4]:
     else:
         print("Invalid choice")
 
+
+###the E-cart program____________________________________________________________________________
+
+print("welcome to E-cart")
+print('''select a product
+1 - milk 
+2 - eggs
+3 - butter
+4 - jam
+5 - cupcake
+6 - chocolate
+7 - coffee''')
+
+products = {
+1 : milk ,
+2 : eggs,
+3 : butter,
+4 : jam,
+5 : cupcake,
+6 : chocolate,
+7 : coffee
+}
+
+prices = {
+    1 : 30,
+    2 : 7,
+    3 : 50,
+    4 : 35,
+    5 : 30,
+    6 : 40,
+    7 : 25
+}
+cart = int(input("select an option:"))
+if cart in prices:
+    qty = int(input("enter the quantity:"))
+    if qty > 0:
+        total = qty * prices[cart]
+        print(f"your selected product price is {products[cart]} & your quantity is {qty}")
+        print(f"your total is {total}")
+    else:
+        print("ERROR : you have to select the quantity")
+else:
+    print("no option selected")
+    
+    
